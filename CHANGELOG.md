@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2025-11-23
+
+### Added
+#### Documentation
+- **Generation Process Section**: Added "Generación con Antigravity" section to `index.html` showcasing the agent's development process with screenshots.
+- **Formatted Documentation Page**: Created `docs/documentation.html` to render `ANTIGRAVITY_CREATION.md` as a proper HTML page.
+- **Enhanced Screenshots**: Improved the "Aplicación en Acción" section with larger cards and detailed feature lists.
+
+### Changed
+#### Documentation
+- **Header Fix**: Improved text rendering for "Google Antigravity" in the header to fix blurriness.
+- **Documentation Link**: Updated the "Leer Documentación Completa" link to point to the new HTML page instead of raw Markdown.
+- **Visual Improvements**: Updated `styles.css` with new animations, card styles, and responsive layouts for the new sections.
+
 ## [0.1.0] - 2025-11-23
 
 ### Added
@@ -50,4 +64,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Protected API routes requiring authentication
 - Secure token validation and expiration
 
+[0.2.0]: https://github.com/pedroid999/test-antigravity/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/pedroid999/test-antigravity/releases/tag/v0.1.0
