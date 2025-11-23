@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentación completa sobre cómo se creó este proyecto con Google Antigravity">
+    <title>Cómo se Creó con Google Antigravity - Documentación Completa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .doc-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--spacing-lg) var(--spacing-sm);
+            background: white;
+        }
+
+        .doc-header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: var(--spacing-xl) 0;
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .doc-nav {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .doc-nav a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: all var(--transition-base);
+        }
+
+        .doc-nav a:hover {
+            transform: translateX(-5px);
+        }
+
+        .doc-content {
+            line-height: 1.8;
+        }
+
+        .doc-content h2 {
+            font-family: var(--font-secondary);
+            font-size: 2rem;
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-dark);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .doc-content h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.5rem;
+            margin-top: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-dark);
+        }
+
+        .doc-content p {
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-light);
+        }
+
+        .doc-content ul,
+        .doc-content ol {
+            margin-left: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-light);
+        }
+
+        .doc-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .doc-content code {
+            background: #f1f3f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e83e8c;
+        }
+
+        .doc-content pre {
+            background: #282c34;
+            color: #abb2bf;
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-md);
+            overflow-x: auto;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .doc-content pre code {
+            background: none;
+            padding: 0;
+            color: #abb2bf;
+        }
+
+        .doc-content strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+            padding: var(--spacing-md);
+            border-left: 4px solid var(--primary-color);
+            border-radius: var(--radius-sm);
+            margin-bottom: var(--spacing-md);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="doc-header">
+        <div class="container">
+            <h1>📚 Documentación Completa</h1>
+            <p style="font-size: 1.2rem; opacity: 0.95;">Cómo se Creó este Proyecto con Google Antigravity</p>
+        </div>
+    </div>
+
+    <div class="doc-container">
+        <div class="doc-nav">
+            <a href="index.html">← Volver al inicio</a>
+        </div>
+
+        <div class="doc-content">
+            <h2>🤖 Project Overview</h2>
+            <p>Este es un sistema full-stack completo de registro de usuarios que presenta:</p>
+            <ul>
+                <li><strong>Backend:</strong> FastAPI con SQLModel, autenticación JWT, y hashing de contraseñas con
+                    Argon2</li>
+                <li><strong>Frontend:</strong> React con Vite, autenticación basada en contexto, y diseño responsive
+                </li>
+                <li><strong>Testing:</strong> Tests automatizados con pytest y verificación basada en navegador</li>
+            </ul>
+
+            <h2>🚀 Proceso de Desarrollo con Antigravity</h2>
+
+            <h3>1. Planificación Inicial</h3>
+            <p>El desarrollo comenzó con una solicitud clara del usuario para construir un sistema completo de registro
+                de usuarios. El agente Antigravity:</p>
+            <ul>
+                <li>Creó un plan de implementación detallado desglosando el trabajo en fases de backend, frontend y
+                    verificación</li>
+                <li>Propuso un stack tecnológico moderno (FastAPI + React con Vite)</li>
+                <li>Diseñó la arquitectura teniendo en mente las mejores prácticas de seguridad</li>
+            </ul>
+
+            <h3>2. Implementación del Backend</h3>
+            <p>El agente de forma autónoma:</p>
+            <ul>
+                <li>Inicializó un proyecto Python usando el gestor de paquetes <code>uv</code></li>
+                <li>Configuró una base de datos SQLite con ORM SQLModel</li>
+                <li>Implementó autenticación segura usando tokens JWT y hashing de contraseñas Argon2</li>
+                <li>Creó endpoints RESTful de API:
+                    <ul>
+                        <li><code>POST /users/register</code> - Registro de usuarios</li>
+                        <li><code>POST /users/token</code> - Login y generación de tokens</li>
+                        <li><code>GET /users/me</code> - Endpoint de perfil protegido</li>
+                    </ul>
+                </li>
+                <li>Escribió tests comprehensivos con pytest para todos los endpoints</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>✨ Decisiones Clave Tomadas por Antigravity:</h4>
+                <ul style="margin-bottom: 0;">
+                    <li>Eligió <code>uv</code> para una gestión de dependencias Python moderna y rápida</li>
+                    <li>Usó Argon2 en lugar de bcrypt para un hashing de contraseñas más fuerte</li>
+                    <li>Implementó correctamente la expiración y validación de tokens JWT</li>
+                    <li>Estructuró el código con clara separación (auth, database, models, routers)</li>
+                </ul>
+            </div>
+
+            <h3>3. Implementación del Frontend</h3>
+            <p>El agente construyó una aplicación React moderna:</p>
+            <ul>
+                <li>Inicializó un proyecto React basado en Vite para una experiencia de desarrollo óptima</li>
+                <li>Creó <code>AuthContext</code> para gestión centralizada del estado de autenticación</li>
+                <li>Construyó tres páginas clave: Register, Login y Profile</li>
+                <li>Implementó rutas protegidas usando React Router</li>
+                <li>Aplicó CSS limpio y responsive con estética de diseño moderno</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>✨ Decisiones Clave Tomadas por Antigravity:</h4>
+                <ul style="margin-bottom: 0;">
+                    <li>Usó Context API para gestión de estado (evitando complejidad innecesaria)</li>
+                    <li>Implementó almacenamiento automático de tokens en localStorage</li>
+                    <li>Creó flujos de autenticación reutilizables</li>
+                    <li>Aplicó CSS moderno con gradientes, animaciones y diseño responsive</li>
+                </ul>
+            </div>
+
+            <h3>4. Testing y Verificación</h3>
+            <p>El agente realizó una verificación comprehensiva:</p>
+            <ul>
+                <li><strong>Tests Automatizados:</strong> Ejecutó la suite de pytest verificando toda la funcionalidad
+                    del backend</li>
+                <li><strong>Testing con Navegador:</strong> Usó automatización de navegador para probar el flujo
+                    completo de usuario:
+                    <ol>
+                        <li>Registro de nuevo usuario</li>
+                        <li>Login con credenciales</li>
+                        <li>Visualización de perfil</li>
+                        <li>Funcionalidad de logout</li>
+                    </ol>
+                </li>
+                <li>Capturó screenshots como prueba de ejecución exitosa</li>
+            </ul>
+
+            <h3>5. Documentación</h3>
+            <p>A lo largo del proceso, Antigravity creó:</p>
+            <ul>
+                <li><code>README.md</code> principal con instrucciones de setup para backend y frontend</li>
+                <li><code>README.md</code> específico del backend documentando la API</li>
+                <li><code>README.md</code> específico del frontend con detalles de componentes</li>
+                <li>Este documento walkthrough con screenshots de verificación</li>
+            </ul>
+
+            <h2>📖 Lecciones Aprendidas</h2>
+
+            <h3>Lo que Funcionó Bien</h3>
+            <ol>
+                <li><strong>Toma Autónoma de Decisiones:</strong> El agente tomó decisiones tecnológicas apropiadas sin
+                    input constante del usuario</li>
+                <li><strong>Seguridad Primero:</strong> Implementación adecuada de patrones de autenticación y
+                    autorización</li>
+                <li><strong>Testing End-to-End:</strong> La automatización de navegador proporcionó confianza en la
+                    experiencia completa del usuario</li>
+                <li><strong>Tooling Moderno:</strong> El uso de herramientas contemporáneas (uv, Vite) mejoró la
+                    velocidad de desarrollo</li>
+            </ol>
+
+            <h3>Fortalezas de Antigravity Demostradas</h3>
+            <ul>
+                <li><strong>Modo Planning:</strong> Creó planes de implementación comprehensivos antes de programar</li>
+                <li><strong>Modo Execution:</strong> Implementó sistemáticamente cada componente</li>
+                <li><strong>Modo Verification:</strong> Probó exhaustivamente toda la funcionalidad</li>
+                <li><strong>Documentación Proactiva:</strong> Generó documentación clara y útil durante todo el proceso
+                </li>
+            </ul>
+
+            <h3>Flujo de Desarrollo</h3>
+            <p>El agente siguió un enfoque estructurado:</p>
+            <ol>
+                <li><strong>Planning</strong> → Creó plan de implementación y desglose de tareas</li>
+                <li><strong>Execution</strong> → Construyó backend, luego frontend, con testing iterativo</li>
+                <li><strong>Verification</strong> → Ejecutó tests automatizados y manuales</li>
+                <li><strong>Documentation</strong> → Creó documentación comprehensiva con prueba visual</li>
+            </ol>
+
+            <h2>🏗️ Aspectos Técnicos Destacados</h2>
+
+            <h3>Arquitectura del Backend</h3>
+            <pre><code>backend/
+├── main.py          # Punto de entrada de la aplicación FastAPI
+├── database.py      # Configuración de base de datos
+├── models.py        # Modelos de datos SQLModel
+├── auth.py          # Utilidades JWT y de contraseñas
+└── routers/
+    └── users.py     # Endpoints de usuario</code></pre>
+
+            <h3>Arquitectura del Frontend</h3>
+            <pre><code>frontend/src/
+├── main.jsx              # Punto de entrada de la aplicación
+├── App.jsx               # Componente principal de routing
+├── context/
+│   └── AuthContext.jsx   # Gestión de estado de autenticación
+└── pages/
+    ├── Register.jsx      # Página de registro
+    ├── Login.jsx         # Página de login
+    └── Profile.jsx       # Página de perfil protegida</code></pre>
+
+            <h2>🎯 Conclusión</h2>
+            <p>Este proyecto demuestra que los agentes de Google Antigravity pueden:</p>
+            <ul>
+                <li>Construir aplicaciones completas y de calidad production de forma autónoma</li>
+                <li>Tomar decisiones arquitectónicas y tecnológicas apropiadas</li>
+                <li>Escribir código limpio y bien estructurado</li>
+                <li>Implementar las mejores prácticas de seguridad</li>
+                <li>Crear tests y documentación comprehensivos</li>
+                <li>Seguir flujos de trabajo de desarrollo modernos</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p style="margin-bottom: 0;"><strong>💡 El sistema completo fue construido mediante instrucciones en
+                        lenguaje natural, con el agente manejando todos los detalles de implementación, testing y
+                        documentación.</strong></p>
+            </div>
+        </div>
+
+        <div class="doc-nav" style="margin-top: var(--spacing-xl); text-align: center;">
+            <a href="index.html" class="btn btn-primary">← Volver a la página principal</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pedro Nieto. Proyecto de demostración con fines educativos.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

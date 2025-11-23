@@ -113,6 +113,12 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    /* Improved text rendering to avoid blurriness */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-weight: 900;
+    letter-spacing: -0.02em;
 }
 
 /* ===================================
@@ -473,10 +479,21 @@ a {
     background: var(--bg-light);
 }
 
+.screenshots-featured {
+    padding: calc(var(--spacing-xl) * 1.5) 0;
+}
+
 .screenshot-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.screenshot-grid-enhanced {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
     margin-top: var(--spacing-lg);
 }
 
@@ -489,6 +506,45 @@ a {
 .screenshot-card.fade-in {
     opacity: 1;
     transform: scale(1);
+}
+
+.screenshot-card-large {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--transition-slow);
+}
+
+.screenshot-card-large.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.screenshot-card-large:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.screenshot-header {
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8ecff 100%);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.screenshot-header h3 {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.screenshot-header p {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin: 0;
 }
 
 .screenshot-frame {
@@ -510,11 +566,139 @@ a {
     width: 100%;
 }
 
+.screenshot-frame-large {
+    padding: var(--spacing-md);
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.screenshot-frame-large img {
+    border-radius: var(--radius-sm);
+    width: 100%;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-base);
+}
+
+.screenshot-frame-large img:hover {
+    transform: scale(1.02);
+}
+
+.screenshot-details {
+    padding: var(--spacing-md);
+    background: white;
+}
+
+.screenshot-details p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+}
+
+.screenshot-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.screenshot-details li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
 .screenshot-caption {
     text-align: center;
     margin-top: var(--spacing-sm);
     color: var(--text-light);
     font-style: italic;
+}
+
+
+
+
+/* ===================================
+   Generation Process Section
+   =================================== */
+.generation-section {
+    background: white;
+}
+
+.generation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.generation-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: var(--shadow-sm);
+}
+
+.generation-card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.generation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-color);
+}
+
+.generation-image {
+    background: #f8f9fa;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.generation-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.generation-card:hover .generation-image img {
+    transform: scale(1.03);
+}
+
+.generation-caption {
+    padding: var(--spacing-md);
+}
+
+.generation-caption h3 {
+    font-family: var(--font-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.generation-caption p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.artifacts-cta {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid #ff9800;
+    text-align: center;
+}
+
+.artifacts-cta p {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    margin: 0;
 }
 
 /* ===================================
